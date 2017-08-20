@@ -1,0 +1,31 @@
+<div ng-app="shopping_order" ng-controller="sorderctrl">
+    <div class="container" >
+        <div class="jumbotron">
+            <h2 class="text-center">我的购物车</h2>
+            <h3 class="text-center" ng-if="itemlist.length == 0">啊哦！您的购物车还是空的，赶快去下单吧！</h3>
+            <table ng-if="itemlist.length != 0" class="table text-center mt10" id="mytable" >
+                <tr>
+                    <th class="col-lg-2 text-center">商品名</th>
+                    <th class="col-lg-1 text-center">商品数量</th>
+                    <th class="col-lg-1 text-center">商品单价</th>
+                    <th class="col-lg-2 text-center">商品总价</th>
+                    <th class="col-lg-2 text-center">当前状态</th>
+                    <th class="col-lg-2 text-center">服务时间</th>
+                    <th class="col-lg-2 text-center">操作</th>
+                </tr>
+                <tr ng-repeat="item in itemlist">
+                    <td class="col-lg-2">{{itemsList[item.itemid].name}}</td>
+                    <td class="col-lg-1">{{item.itemnum}}</td>
+                    <td class="col-lg-1">{{itemsList[item.itemid].price}}</td>
+                    <td class="col-lg-2">{{itemsList[item.itemid].price*item.itemnum}}</td>
+                    <td class="col-lg-2">{{item.itemstate}}</td>
+                    <td class="col-lg-2">{{item.itime}}</td>
+                    <td class="col-lg-2">
+                        <button type="button" class="btn btn-danger" ng-click="delete(item.id);" ng-show="item.itemstate=='未处理'">删除</button>
+                        <button type="button" class="btn btn-primary" ng-click="sure(item.id)" ng-show="item.itemstate=='已处理'">确认</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

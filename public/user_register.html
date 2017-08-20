@@ -1,0 +1,96 @@
+<div ng-app="user_register" ng-controller="uregister">
+    <div class="container">
+    <div class="jumbotron">
+
+        <h2 class="text-center">欢迎注册</h2>
+        <hr />
+
+        <form class="form-horizontal" role="form" id="formsub" name="formsub">
+
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label col-sm-offset-2">用户名</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.username.$invalid && formsub.username.$dirty}">
+                    <input name="username" type="text" class="form-control" id="username" placeholder="请输入用户名"
+                           ng-model="username" ng-minlength="2"  ng-maxlength="16" ng-pattern="/^([a-zA-Z])+/" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.username.$error.minlength && formsub.username.$dirty">用户名最少为2位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.username.$error.maxlength && formsub.username.$dirty">用户名最多为16位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.username.$error.pattern && formsub.username.$dirty">用户名必须为字母开头！</label>
+            </div>
+
+            <div class="form-group ">
+                <label for="password" class="col-sm-2 control-label col-sm-offset-2">密码</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.passwod.$invalid && formsub.password.$dirty}">
+                    <input name="password" type="password" class="form-control" id="password" placeholder="请输入密码"
+                           ng-model="password" ng-minlength="6"  ng-maxlength="16" ng-pattern="/^([a-zA-Z])+/" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.password.$error.minlength && formsub.password.$dirty">密码最少为6位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.password.$error.maxlength && formsub.password.$dirty">密码最多为16位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.password.$error.pattern && formsub.password.$dirty">密码必须为字母开头！</label>
+            </div>
+
+            <div class="form-group ">
+                <label for="password2" class="col-sm-2 control-label col-sm-offset-2">确认密码</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.password2.$invalid && formsub.password2.$dirty}">
+                    <input name="password2" type="password" class="form-control" id="password2" placeholder="请再次输入密码"
+                           ng-model="password2" ng-minlength="6"  ng-maxlength="16" ng-pattern="/^([a-zA-Z])+/" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="password != password2">两次输入密码不一致</label>
+            </div>
+
+            <div class="form-group ">
+                <label for="nickname" class="col-sm-2 control-label col-sm-offset-2">昵称</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.nickname.$invalid && formsub.nickname.$dirty}">
+                    <input name="nickname" type="text" class="form-control" id="nickname" placeholder="请输入昵称"
+                           ng-model="nickname" ng-minlength="2"  ng-maxlength="16" ng-pattern="/^([a-zA-Z])+/" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.nickname.$error.minlength && formsub.nickname.$dirty">昵称最少为2位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.nickname.$error.maxlength && formsub.nickname.$dirty">昵称最多为16位！</label>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.nickname.$error.pattern && formsub.nickname.$dirty">昵称必须为字母开头！</label>
+            </div>
+
+            <div class="form-group ">
+                <label for="age" class="col-sm-2 control-label col-sm-offset-2">年龄</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.age.$invalid && formsub.age.$dirty}">
+                    <input name="age" type="number" class="form-control" id="age" placeholder="请输入年龄"
+                           ng-model="age" ng-required="true">
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.age.$error.required && formsub.age.$dirty">年龄不能为空！</label>
+            </div>
+
+            <div class="form-group ">
+                <label  class="col-sm-2 control-label col-sm-offset-2">性别</label>
+                <div class="col-sm-5">
+                    <label class="col-sm-2 control-label "><input type="radio" name="sex" checked="checked" id="" value="man" />男</label>
+                    <label class="col-sm-2 control-label "><input type="radio" name="sex" id="" value="woman" />女</label>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label for="telphone" class="col-sm-2 control-label col-sm-offset-2">电话</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.telphone.$invalid && formsub.telphone.$dirty}">
+                    <input name="telphone" type="text" class="form-control" id="telphone" placeholder="请输入电话号码"
+                           ng-model="telphone" ng-required="true" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.telphone.$error.required && formsub.telphone.$dirty">电话不能为空！</label>
+            </div>
+
+            <div class="form-group ">
+                <label for="email" class="col-sm-2 control-label col-sm-offset-2">邮箱</label>
+                <div class="col-sm-5" ng-class="{'has-error':formsub.email.$invalid && formsub.email.$dirty}">
+                    <input name="email" type="email" class="form-control" id="email" placeholder="请输入邮箱"
+                           ng-model="email" ng-required="true" />
+                </div>
+                <label class="col-sm-2 control-label text-danger abs" ng-show="formsub.email.$error.required && formsub.email.$dirty">邮箱不能为空！</label>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-6">
+                    <button ng-disabled="formsub.$invalid" type="submit" class="btn btn-info" ng-click="register()">注册</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    </div>
+</div>

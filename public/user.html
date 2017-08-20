@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册|登录</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/r.png" />
+    <link rel="stylesheet" type="text/css" href="css/user.css"/>
+
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/angular-route.js"></script>
+    <script src="js/lib/jquery-1.8.3.min.js"></script>
+    <script src="js/userjs/user.js"></script>
+    <script src="js/userjs/user_register.js"></script>
+    <script src="js/userjs/user_login.js"></script>
+    <script src="js/userjs/user_route.js"></script>
+</head>
+<body ng-app="userapp" ng-controller="userctrl">
+
+    <!--header-->
+    <div  class="header wrap">
+        <div class="logo">
+            <a href="index.html"><img src="img/r.png"/></a>
+            <span class="logoSlogan">Razer宠物之家<br/>关爱宠物，让您的宠物更加完美！</span>
+            <span class="weixin"><img src="img/weixin.jpg" alt="微信" />微信</span>
+            <span class="qdcode"><img src="img/qdcode.png"/></span>
+        </div>
+    </div>
+    <!--header end-->
+
+    <!--banner-->
+    <div class="banner wrap">
+        <h3>欢迎加入Razer宠物之家</h3>
+    </div>
+    <!--banner end-->
+
+    <!--tab-->
+    <div>
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li><a href="#/user_login">登录</a></li>
+            <li><a href="#/user_register">注册</a></li>
+            <li><a href="index.html">返回首页</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
+
+    <!--container-->
+    <div ng-view></div>
+    <!--container end-->
+
+
+</body>
+
+</html>

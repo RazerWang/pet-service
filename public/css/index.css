@@ -1,0 +1,237 @@
+
+
+/*global*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "microsoft yahei";
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+img{
+	border:none;
+}
+.wrap{
+	width: 100%;
+	min-width: 1250px;
+}
+.w1250{
+	width: 1250px;
+}
+/*global end*/
+
+
+
+/*full-page*/
+.section { 
+	text-align: center; 
+	color: #fff;
+}
+.section .fp-tableCell{
+	vertical-align:baseline;
+}
+/*full-page end*/
+
+
+
+
+
+
+
+/*logo*/
+#showUser{
+	display: none;
+}
+.logo{
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.logo a img{
+	height: 60px;
+	margin-top: 10px;
+	margin-left: 200px;
+	float: left;
+}
+.logoSlogan{
+	display: block;
+	float: left;
+	width: 250px;
+	height: 20px;
+	font-size: 16px;
+	color:#F68657;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.weixin img{
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.weixin{
+	float: right;
+	display: block;
+	height: 30px;
+	width: 100px;
+	line-height: 30px;
+	cursor: pointer;
+	margin-right: 200px;
+	margin-top: 40px;
+}
+.qdcode{
+	float: right;
+	display: none;
+	width: 75px;
+	height: 75px;
+}
+.qdcode img{
+	width: 100%;
+	height: 100%;
+}
+/*logo end*/
+
+
+
+/*nav*/
+.nav{
+	height: 81px;
+	overflow: hidden;
+	position: fixed;
+	z-index: 6;
+	background-color:#F68657;
+}
+.subnav{
+	height: 31px;
+	background-color: #fff;
+	border-top: 1px solid #eee;
+	padding-right: 300px;
+}
+.subnav span{
+	float: right;
+	line-height: 30px;
+	font-size: 14px;
+}
+.subnav span a{
+	color:#000000;
+	margin: 0 10px;
+}
+#menu {
+	margin: 0 auto; 
+	width: 600px;
+	height: 50px;
+}
+#menu li { 
+	float: left; 
+	margin-left: 10px;
+	font-size: 14px;
+	width: 140px;
+	height: 50px;
+	}
+#menu a { 
+	width: 140px;
+	height: 50px;
+	float: left; 
+	display: block;
+	background-color:#F68657; 
+	color: #fff; 
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+}
+#menu .active a { 
+	background-color:#EC7357;
+}
+/*nav end*/
+
+
+
+/*section2*/
+.chooseCon{
+	display: block;
+	height: 80px;
+	width: 1000px;
+	color:#000;
+	margin: 0 auto;
+	text-align: left;
+	border:2px solid #ccc;
+	padding: 10px;
+	cursor:pointer;
+}
+.chooseCon:hover{
+	border:2px solid #F68657;
+	background-color: rgba(255,0,0,.1);
+}
+.mt100{
+	margin-top: 100px;
+}
+.mt10{
+	margin-top: 10px;
+}
+
+.chooseCon img{
+	height: 100%;
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+.chooseCon b{
+	display: block;
+	float: left;
+	font-size:16px;
+}
+/*section2 end*/
+
+/*section3*/
+.sec3title{
+	color:#999;
+}
+.servicewrap{
+	width: 1000px;
+	margin: 60px auto 0;
+}
+.service{
+	display: block;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	float: left;
+}
+.service b{
+	 display: block;
+	 font-weight:normal;
+	 color:#000;
+ }
+.service span{
+	display: block;
+	color: #f00;
+}
+/*section3 end*/
+
+
+/*section4*/
+.footbanner{
+	margin-top: 81px;
+	height: 400px;
+	background-image: url("../images/family.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 50px;
+}
+.footbanner h2{
+	color:#000;
+	font-weight: normal;
+}
+.copy p{
+	color:#000;
+	margin-top: 8px;
+}
+/*section4 end*/
+

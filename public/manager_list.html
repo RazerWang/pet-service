@@ -1,0 +1,75 @@
+
+<div ng-app="manager_list" ng-controller="mlistctrl" class="jumbotron">
+    <div class="container">
+        <div class="jumbotron">
+            <table class="table" id="mytable" >
+                <tr>
+                    <td><input type="text" ng-model="search.$" class="form-control" placeholder="请输入你要查询的内容"></td>
+                    <td><input type="text" ng-model="search.username" class="form-control" placeholder="请输入你要查询的用户姓名"></td>
+                    <td colspan="2"><input type="text" ng-model="search.nickname" class="form-control" placeholder="请输入你要查询的用户昵称"></td>
+                </tr>
+                <tr><th>用户编号</th><th>用户姓名</th><th>用户昵称</th><th>操作</th></tr>
+                <tr ng-repeat="use in users | filter:search | myFilter : (pageNow-1)*pageSize | limitTo : pageSize">
+                    <td>{{use.id}}</td>
+                    <td><a href="javascript:;" ng-click="check(use.id)">{{use.username}}</a></td>
+                    <td>{{use.nickname}}</td>
+                    <td><a href="javascript:;" ng-click="del(use.id)">删除</a></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align:center;padding-top: 50px;">
+                        <div class="btn-group  btn-group-lg" >
+                            <button type="button" class="btn btn-warning" ng-disabled="pageNow <= 1" ng-click="pageNow = 1">首页</button>
+                            <button type="button" class="btn btn-warning" ng-disabled="pageNow <= 1" ng-click="pageNow = pageNow - 1">上一页</button>
+
+                            <button type="button" class="btn btn-default" disabled="disabled">当前为 第{{pageNow}}页</button>
+
+                            <button type="button" class="btn btn-warning" ng-disabled="pageNow >= allpages" ng-click="pageNow = pageNow + 1">下一页</button>
+                            <button type="button" class="btn btn-warning" ng-disabled="pageNow >= allpages" ng-click="pageNow = allpages">尾页</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+
+    <div id="change" class="jumbotron" style="position: fixed;left: 0;top: 0;background-color: rgba(0,0,0,.4);display: none;width: 100%;height: 100%;">
+        <div class="container" style="width: 80%;height: 40%;margin: 5% auto;background-color:#eee;border-radius:20px;">
+            <form id="formsub">
+                <table class="table">
+                    <br>
+                    <tr style="color:#000;">
+                        <th>用户编号</th>
+                        <th>用户姓名</th>
+                        <th>用户昵称</th>
+                        <th>用户密码</th>
+                        <th><a href="javascript:;" style="color:#f00;" ng-click="close()">关闭</a></th>
+                    </tr>
+                    <tr >
+                        <td><input type="text" name="id" ng-model="user.id" value="{{user.id}}" readonly="readonly"/></td>
+                        <td><input type="text" name="username"  ng-model="user.username" value="{{user.username}}"/></td>
+                        <td><input type="text" name="nickname"  ng-model="user.nickname" value="{{user.nickname}}"/></td>
+                        <td><input type="text" name="password"  ng-model="user.password" value="{{user.password}}"/></td>
+                        <td></td>
+                    </tr>
+                    <tr  style="color:#000;">
+                        <th>年龄</th>
+                        <th>性别</th>
+                        <th>电话</th>
+                        <th>邮箱</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="age"  ng-model="user.age" value="{{user.age}}"/></td>
+                        <td><input type="text" name="sex"  ng-model="user.sex" value="{{user.sex}}"/></td>
+                        <td><input type="text" name="telphone"  ng-model="user.telphone" value="{{user.telphone}}"/></td>
+                        <td><input type="text" name="email"  ng-model="user.email" value="{{user.email}}"/></td>
+                        <td><a href="javascript:;" ng-click="update()" style="color:#449d44;">确认修改</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</div>

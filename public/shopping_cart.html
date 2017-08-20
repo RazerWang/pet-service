@@ -1,0 +1,55 @@
+<div ng-app="shopping_cart" ng-controller="scartctrl">
+    <div class="container" >
+        <div class="jumbotron">
+            <h2 class="text-center">确认订单</h2>
+            <hr />
+            <div class="row">
+                <img src="{{itemInfo.icon}}" alt="" class="shopping_icon">
+                <h3>{{itemInfo.name}}</h3>
+            </div>
+            <div style="margin-top: 40px" class="row">
+                <div class="col-lg-4"></div>
+                <h4 class="col-lg-2 text-center">单价：</h4>
+                <h4 class="col-lg-2">
+                    <span style="color:#f00;">{{itemInfo.price}}</span>
+                    /
+                    <span>{{itemInfo.unit}}</span>
+                </h4>
+            </div>
+            <div style="margin-top: 20px;" class="row">
+                <div class="col-lg-4"></div>
+                <h4 class="col-lg-2 text-center">数量：</h4>
+                <div class="col-lg-2">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="jian();">-</button>
+                        </span>
+                        <input type="text" class="form-control text-center" readonly="readonly" value="{{itemNum}}" ng-model="itemNum">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="jia();">+</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-lg-4"></div>
+                <h4 class="col-lg-2 text-center">总价：</h4>
+                <h4 class="col-lg-2"><span style="color:#f00;">{{itemInfo.price*itemNum}}</span> 元</h4>
+            </div>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-lg-4"></div>
+                <h4 class="col-lg-2 text-center">服务时间：</h4>
+                <h4 class="col-lg-2"><input type="date" id="time"></h4>
+            </div>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary pull-right" ng-click="submit();">确认</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-warning" ng-click="reset();">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

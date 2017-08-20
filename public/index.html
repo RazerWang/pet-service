@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Razer的宠物之家</title>
+
+		<!--fullpage-->
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+		<!--wow-->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!--轮播-->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--mystyle-->
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--icon-->
+		<link rel="shortcut icon" type="image/x-icon" href="img/r.png" />
+
+		<!--angular-->
+		<script src="js/lib/angular.js"></script>
+		<!--jquery-->
+		<script type="text/javascript" src="js/lib/jquery-1.8.3.min.js"></script>
+		<!--fullpage-->
+		<script type="text/javascript" src="js/lib/jquery.fullPage.min.js"></script>
+		<!--wow-->
+		<script src="js/lib/wow.js"></script>
+		<!--轮播-->
+		<script src="js/otherjs/vmc.slider.js"></script>
+		<script src="js/otherjs/vmc.slider.effects.js"></script>
+		<!--angular controller-->
+		<script src="js/myjs/indexCtrl.js"></script>
+		<!--myjs-->
+		<script src="js/myjs/index.js"></script>
+
+	</head>
+	<body ng-app="indexapp" ng-controller="indexctrl">
+
+		<!--header-->
+		<div class="header wrap">
+			<!--logo-->
+			<div class="logo">
+				<a href="index.html"><img src="img/r.png" class="wow rubberBand" data-wow-iteration="infinite"/></a>
+				<span class="logoSlogan">Razer宠物之家<br/>关爱宠物，让您的宠物更加完美！</span>
+				<span class="weixin"><img src="img/weixin.jpg" alt="微信" />微信</span>
+				<span class="qdcode"><img src="img/qdcode.png"/></span>
+			</div>
+			<!--logo end-->
+
+			<!--navbar-->
+			<div class="wrap nav">
+				<p class="subnav">
+					<span class="afterHide">
+						<a href="manager.html">管理员登录</a>
+					</span>
+					<span class="afterHide">|</span>
+					<span id="showUser">
+						<a href="#">{{showUser}}您好！</a>
+						<a href="shopping.html#/shopping_order">购物车</a>
+						<a href="shopping.html#/myinfo">我的资料</a>
+						<a href="#" ng-click="logout()">退出</a>
+					</span>
+					<span class="afterHide">
+						<a href="user.html#/user_register">注册</a>
+					</span>
+					<span  class="afterHide">|</span>
+					<span  class="afterHide">
+						<a href="user.html#/user_login">登录</a>
+					</span>
+				</p>
+				<ul id="menu">
+					<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+					<li data-menuanchor="page2"><a href="#page2">专业服务</a></li>
+					<li data-menuanchor="page3"><a href="#page3">更多服务</a></li>
+					<li data-menuanchor="page4"><a href="#page4">关于我们</a></li>
+				</ul>
+			</div>
+			<!--navbar end-->
+		</div>
+		<!--header end-->
+
+		<!--container-->
+		<div id="dowebok">
+			<!--section_01-->
+			<div class="section">
+				<!--轮播插件-->
+				<div class="content" style="width:1250px;height:448px;margin:81px auto 0;overflow:hidden;">
+					<div id="slider">
+						<a href="#"><img src="otherimg/banner01.jpg"/></a>
+						<a href="#"><img src="otherimg/banner02.jpg"/></a>
+						<a href="#"><img src="otherimg/banner03.jpg"/></a>
+						<a href="#"><img src="otherimg/banner04.jpg"/></a>
+						<a href="#"><img src="otherimg/banner05.jpg"/></a>
+						<a href="#"><img src="otherimg/banner06.jpg"/></a>
+					</div>
+				</div>
+				<!--轮播插件-->
+			</div>
+			<!--section_01 end-->
+
+			<!--section_02-->
+			<div class="section">
+				<a class="chooseCon mt100 wow slideInLeft" href="shopping.html#/shopping_cart/w_01">
+					<img src="images/keep.png" alt="">
+					<b>宠物寄养</b><br>
+					<span>我们上门接送您的宠物；宠物在专门的区域自由活动，可结识更多伙伴增强自信和社交能力；全天候专人监护，还可提供额外护理，尽享全心呵护。(适合：猫、狗)</span>
+				</a>
+				<a class="chooseCon mt10 wow slideInRight" href="shopping.html#/shopping_cart/w_02">
+					<img src="images/food.png" alt="">
+					<b>宠物看养</b><br>
+					<span>我们每天上门照料您的宠物：喂食、清洁、通风并陪它玩耍，您的爱宠可以在它熟悉的家中接受照看；上门工作人员均经过严格背景调查并备案。(适合：猫、狗、鱼、兔、鼠、猪、鸡)</span>
+				</a>
+				<a class="chooseCon mt10 wow slideInLeft" href="shopping.html#/shopping_cart/w_03">
+					<img src="images/service.png" alt="">
+					<b>宠物行为纠正</b><br>
+					<span>我们纠正您宠物的多项不良行为：便溺、啃咬、吠叫、扑人、打架等；可根据您宠物进行针对性的纠正训练，让您的宠物更加完美。(适合：狗)</span>
+				</a>
+				<a class="chooseCon mt10 wow slideInRight" href="shopping.html#/shopping_cart/w_04">
+					<img src="images/play.png" alt="">
+					<b>宠物技能训练</b><br>
+					<span>我们为您的宠物训练基于口令的技能：来、坐、趴、滚、噤、吠、吐、站、跳、爬、等；让您的宠物与众不同更加出色。(适合：狗)</span>
+				</a>
+				<a class="chooseCon mt10 wow slideInLeft" href="shopping.html#/shopping_cart/w_05">
+					<img src="images/other.png" alt="">
+					<b>宠物分娩护理</b><br>
+					<span>我们为即将分娩的宠物以及刚出生的宠物宝宝提供的特别护理，让您的爱宠在分娩期间获得全方位细心照料。(适合：猫、狗)</span>
+				</a>
+				<a class="chooseCon mt10 wow slideInRight" href="shopping.html#/shopping_cart/w_06">
+					<img src="images/dog.png" alt="">
+					<b>宠物培养</b><br>
+					<span>我们为您的幼犬提供历时3个月的专业化培养，让您拥有一只心智成熟、习惯良好、行为得体的完美狗狗。(适合：狗)</span>
+				</a>
+
+			</div>
+			<!--section_02 end-->
+
+			<!--section_03-->
+			<div class="section">
+				<h2 class="sec3title mt100">我们为托管期间的宠物提供更多的服务</h2>
+				<div class="servicewrap">
+					<a href="shopping.html#/shopping_cart/w_07" class="service">
+						<img src="serviceimg/service01.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物营养套餐</b>
+						<span>￥10.00/天</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_08" class="service">
+						<img src="serviceimg/service02.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物常规驱虫</b>
+						<span>￥50.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_09" class="service">
+						<img src="serviceimg/service03.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物疫苗接种</b>
+						<span>￥80.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_10" class="service">
+						<img src="serviceimg/service04.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物疾病监测</b>
+						<span>￥60.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_11" class="service">
+						<img src="serviceimg/service05.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物常规护理</b>
+						<span>￥15.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_12" class="service">
+						<img src="serviceimg/service06.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物洗澡</b>
+						<span>￥40.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_13" class="service">
+						<img src="serviceimg/service07.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物剪毛</b>
+						<span>￥100.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_14" class="service">
+						<img src="serviceimg/service08.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物解结</b>
+						<span>￥30.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_15" class="service">
+						<img src="serviceimg/service09.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物修甲</b>
+						<span>￥30.00/次</span>
+					</a>
+					<a href="shopping.html#/shopping_cart/w_16" class="service">
+						<img src="serviceimg/service10.png" alt="" class="wow pulse" data-wow-iteration="infinite">
+						<b>宠物刷牙</b>
+						<span>￥80.00/次</span>
+					</a>
+				</div>
+			</div>
+			<!--section_03 end-->
+
+			<!--section_04-->
+			<div class="section">
+				<div class="footbanner wow flip"><h2>它就像我们的家人一样<br><br>别让您的宠物总是陪伴孤独</h2></div>
+				<div class="copy">
+					<p>联系电话：18653377245</p>
+					<p>邮箱：razer0922@hotmail.com</p>
+					<p>郑州航院13级10系7专业2班</p>
+					<p>该网站由王泽专业综合设计，请勿侵权</p>
+					<p>Copyright © 2016 王泽</p>
+				</div>
+			</div>
+			<!--section_04 end-->
+		</div>
+		<!--container end-->
+		
+	</body>
+	<script>
+		new WOW().init();
+	</script>
+</html>

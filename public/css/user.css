@@ -1,0 +1,112 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "microsoft yahei";
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    border:none;
+}
+.wrap{
+    width: 100%;
+    min-width: 1250px;
+}
+.w1250{
+    width: 1250px;
+}
+/*global end*/
+
+
+/*logo*/
+.logo{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.logo a img{
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 200px;
+    float: left;
+}
+.logoSlogan{
+    display: block;
+    float: left;
+    width: 250px;
+    height: 20px;
+    font-size: 16px;
+    color:#F68657;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.weixin img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.weixin{
+    float: right;
+    display: block;
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 200px;
+    margin-top: 40px;
+}
+.qdcode{
+    float: right;
+    display: none;
+    width: 75px;
+    height: 75px;
+}
+.qdcode img{
+    width: 100%;
+    height: 100%;
+}
+/*logo end*/
+
+
+
+/*banner*/
+.banner{
+    height: 50px;
+    color:#fff;
+    text-align: center;
+    background-color:#F68657;
+}
+.banner h3{
+    line-height: 50px;
+}
+/*banner end*/
+
+
+
+/*error*/
+.abs{
+    position: absolute;
+    background-color: #eee;
+}
+/*error end*/
+
+
+
+
+/*shopping*/
+.shopping_icon{
+    display: block;
+    height: 60px;
+    margin-left: 40%;
+    float: left;
+    margin-right: 10px;
+}
+/*shopping end*/

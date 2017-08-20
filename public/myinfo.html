@@ -1,0 +1,66 @@
+<div ng-app="myinfoapp" ng-controller="myinfoctrl">
+    <div class="container" >
+        <div class="jumbotron">
+            <h2 class="text-center">我的资料</h2>
+            <hr />
+            <form id="mymyinfo">
+                <input type="hidden" name="id" id="id" value="{{dataInfo[0].id}}">
+            <div style="margin-top: 40px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >用户名</span>
+                    <input type="text" class="form-control" name="username" id="username" value="{{dataInfo[0].username}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >密码</span>
+                    <input type="text" class="form-control" name="password" id="password" value="{{dataInfo[0].password}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >昵称</span>
+                    <input type="text" class="form-control" name="nickname" id="nickname" value="{{dataInfo[0].nickname}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >年龄</span>
+                    <input type="text" class="form-control" name="age" id="age" value="{{dataInfo[0].age}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >性别</span>
+                    <input type="text" class="form-control" name="sex" id="sex" value="{{dataInfo[0].sex}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >电话</span>
+                    <input type="text" class="form-control" name="telphone" id="telphone" value="{{dataInfo[0].telphone}}" >
+                </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+                <div class="col-lg-4"></div>
+                <div class="input-group col-lg-4">
+                    <span class="input-group-addon" >邮箱</span>
+                    <input type="text" class="form-control" name="email" id="email" value="{{dataInfo[0].email}}" >
+                </div>
+            </div>
+            </form>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary pull-right" ng-click="submitmyinfo();">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
