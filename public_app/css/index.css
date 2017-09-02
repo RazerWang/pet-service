@@ -1,0 +1,15 @@
+
+.wz-icon{
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wz-icon-keep{background-image: url("../images/keep.png");}
+.wz-icon-food{background-image: url("../images/food.png");}
+.wz-icon-service{background-image: url("../images/service.png");}
+.wz-icon-play{background-image: url("../images/play.png");}
+.wz-icon-other{background-image: url("../images/other.png");}
+.wz-icon-dog{background-image: url("../images/dog.png");}

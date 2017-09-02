@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <link rel="stylesheet" href="./js/vendor/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="mui-text-center">
+        <span class="logo"></span>
+        <span class="title">宠物之家</span>
+    </div>
+    <div class="mui-card" style="margin-top: 30px;">
+        <!--页眉，放置标题-->
+        <div class="mui-card-header">欢迎登陆</div>
+        <!--内容区-->
+        <div class="mui-card-content">
+            <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>用户名</label>
+                    <input type="text" class="mui-input-clear w-username" placeholder="请输入用户名">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input type="password" class="mui-input-password w-password" placeholder="请输入密码">
+                </div>
+                <button type="button" class="mui-btn mui-btn-block wz-orange-background w-login-btn" style="color:#fff;margin: 10px 0 0;">确认</button>
+            </form>
+        </div>
+        <!--页脚，放置补充信息或支持的操作-->
+        <div class="mui-card-footer">
+            <div style="width: 100%;">
+                <span class="mui-pull-right w-to-register">注册账号</span>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="./js/lib/myCommon.js"></script>
+    <script src="./js/vendor/mui/js/mui.min.js"></script>
+    <script>mui.init();</script>
+    <script src="./js/pet-service-app/login.js"></script>
+
+</body>
+</html>
