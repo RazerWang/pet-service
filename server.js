@@ -6,7 +6,8 @@ var url = require("url");
 var util = require("util");
 var mysql  = require('mysql');
 var app = express();
-app.use(express.static("public"));
+// app.use(express.static("public"));//pc
+app.use(express.static("public_app"));//app
 
 
 

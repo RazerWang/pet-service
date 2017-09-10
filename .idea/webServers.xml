@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9222506e-4b7f-45fe-a01f-806560e6f347" name="petservice" url="http://127.0.0.1:8080">
+        <fileTransfer mountedRoot="D:\petservice" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

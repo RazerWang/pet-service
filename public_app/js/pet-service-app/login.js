@@ -1,5 +1,5 @@
 /**
- * Created by razer on 2017/8/20.
+ * Created by razer on 2017/5/18.
  */
 
 $(function () {
@@ -31,6 +31,7 @@ LoginPageObject.prototype = {
                     if(res == "error"){
                         mui.alert("对不起，登录失败，请检查您输入的信息是否正确","提示","确认",function () {});
                     }else{
+                        res = JSON.parse(res);
                         console.log(res);
                         sessionStorage.setItem("userid",res.id);
                         mui.toast("登录成功");

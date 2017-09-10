@@ -134,7 +134,7 @@
 				else if(money>=10000){
 					return money/10000 + '万';
 				}else{
-					return money + '';
+					return money/1 + '';
 				}
 			}else{
 				if(money>100000000){
@@ -143,7 +143,7 @@
 				else if(money>=10000){
 					return (money/10000).toFixed(2) + '万';
 				}else{
-					return (money).toFixed(2) + '';
+					return (money/1).toFixed(2) + '';
 				}
 			}
 		};

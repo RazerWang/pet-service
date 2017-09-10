@@ -1,5 +1,5 @@
 /**
- * Created by razer on 2017/8/20.
+ * Created by razer on 2017/5/18.
  */
 
 $(function () {
@@ -33,10 +33,12 @@ RegisterPageObject.prototype = {
                     data : db,
                     success : function (res) {
                         mui.toast("注册成功");
-                        mui.openWindow({
-                            url: "../login.html",
-                            id: "login"
-                        });
+                        setTimeout(function () {
+                            mui.openWindow({
+                                url: "../login.html",
+                                id: "login"
+                            });
+                        },300);
                     }
                 })
             }

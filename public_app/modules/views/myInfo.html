@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <link rel="stylesheet" href="../../js/vendor/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/register.css">
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left w-back"></a>
+        <h1 class="mui-title">我的信息</h1>
+    </header>
+    <div class="mui-scroll-wrapper mui-content" style="margin-top: 10px;">
+        <div class="mui-scroll">
+            <form class="mui-input-group" id="formsub">
+                <div class="mui-input-row">
+                    <label>用户名 <span class="cred">*</span></label>
+                    <input type="hidden" name="id">
+                    <input type="text" class="mui-input-clear" name="username" placeholder="请输入用户名">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码 <span class="cred">*</span></label>
+                    <input type="text" class="mui-input-clear" name="password" placeholder="请输入密码">
+                </div>
+                <div class="mui-input-row">
+                    <label>昵称 <span class="cred">*</span></label>
+                    <input type="text" class="mui-input-clear" name="nickname" placeholder="请输入昵称">
+                </div>
+                <div class="mui-input-row">
+                    <label>年龄 <span class="cred">*</span></label>
+                    <input type="number" class="mui-input-clear" name="age" placeholder="请输入年龄">
+                </div>
+                <div class="mui-input-row">
+                    <label>性别 <span class="cred">*</span></label>
+                </div>
+                <div class="mui-input-row mui-radio">
+                    <label>男</label>
+                    <input name="sex" type="radio" value="man">
+                </div>
+                <div class="mui-input-row mui-radio">
+                    <label>女</label>
+                    <input name="sex" type="radio" value="woman">
+                </div>
+                <div class="mui-input-row">
+                    <label>电话 <span class="cred">*</span></label>
+                    <input type="text" class="mui-input-clear" name="telphone" placeholder="请输入电话号码">
+                </div>
+                <div class="mui-input-row">
+                    <label>邮箱 <span class="cred">*</span></label>
+                    <input type="text" class="mui-input-clear" name="email" placeholder="请输入邮箱地址">
+                </div>
+            </form>
+            <button type="button" class="mui-btn mui-btn-block wz-orange-background w-update-btn" style="color:#fff;margin: 10px 0 0;">修改</button>
+        </div>
+    </div>
+
+<script src="../../js/vendor/jquery-1.9.1.min.js"></script>
+<script src="../../js/lib/myCommon.js"></script>
+<script src="../../js/vendor/mui/js/mui.min.js"></script>
+<script>mui.init();</script>
+<script src="../../js/pet-service-app/view/myInfo.js"></script>
+</body>
+</html>

@@ -13,3 +13,10 @@
 .wz-icon-play{background-image: url("../images/play.png");}
 .wz-icon-other{background-image: url("../images/other.png");}
 .wz-icon-dog{background-image: url("../images/dog.png");}
+
+.wz-fr{
+    float: right;
+}
+.wz-grey-color{
+    color: #666;
+}
